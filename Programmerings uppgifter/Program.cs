@@ -19,12 +19,12 @@ using uppgift3;
 }
 */
 // Uppgift 1
+// Vill man ha Y värden så gör man samma sak för Y
 // Olle, du sa att min lösning var OK.
 /*void GenerateNumbers()
 {
     // ger X ett random nummer
     Random X = new Random();
-    int? value = X.Next(0, 10);
     int[] numberX = new int[5];
     // en funktion som tar bort duplicates
     void RemoveDuplicate()
@@ -32,14 +32,14 @@ using uppgift3;
         int[] removedup = numberX.Distinct().ToArray();
         Array.ForEach(removedup, x => Console.WriteLine("X = " + x));
     }
-    // sätter in 5 random värden från X i listan numberX
+    // fyller listan med 5 random värden från X i listan numberX
     for (int i = 0; i < numberX.Length; i++)
     {
         numberX[i] = X.Next(0,10);
     }
     // kallar på funktionen som skannar listan efter duplicates och tar bort dom.
     RemoveDuplicate();
-    // strunta i detta
+    // strunta i detta som är under
     if (numberX == null || numberX!.Contains(5))
     {
         RemoveDuplicate();
@@ -83,6 +83,7 @@ void Lösenord()
         input = Console.ReadLine();
         if (input.Length > 3 && input.Length < 10)
         {
+            // sparar lösenordet
             sparatlösenord.setlösenord(input);
             Console.WriteLine("lösenord är sparat, vill du se ditt lösenord? Y/N");
             if (input.Length < 3 || input.Length > 10)
@@ -90,7 +91,7 @@ void Lösenord()
                 Console.WriteLine("läs texten idiot");
             }
         }
-        
+        // visar lösenordet
         if (input == "Y")
         {
             Console.WriteLine(sparatlösenord.visalösenord());
@@ -105,11 +106,11 @@ Lösenord();
 
 static void Konto()
 {
+    // skapar 2 nya konton från classen Bank
     var konto1 = new Bank("Elias", 10000, "2929 9238 1948");
     var konto2 = new Bank("Lukas", 20, "2020 6969 0911");
+    // printar nummer, ägare, och totala summan pengar
     Console.WriteLine($"Kontot med {konto1.Kortnummer} har skapats till {konto1.Ägare} med {konto1.Balance} kr");
     
 }
 Konto();
-
-
