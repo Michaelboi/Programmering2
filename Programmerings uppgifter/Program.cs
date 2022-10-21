@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.CodeDom.Compiler;
 using System.Globalization;
 using System.Security.Cryptography.X509Certificates;
@@ -69,6 +69,7 @@ GenerateNumbers();
 }
 GenerateNumbers();
 */
+/*
 void Lösenord()
 {
     // variabel för input
@@ -100,7 +101,15 @@ void Lösenord()
     
 }
 Lösenord();
+*/
+
+static void Konto()
+{
+    var konto1 = new Bank("Elias", 10000, "2929 9238 1948");
+    var konto2 = new Bank("Lukas", 20, "2020 6969 0911");
+    Console.WriteLine($"Kontot med {konto1.Kortnummer} har skapats till {konto1.Ägare} med {konto1.Balance} kr");
+    
+}
+Konto();
 
 
-var konto1 = new Bank("Elias", 10000, "2021 2458 4935 1393");
-var konto2 = new Bank("Malkolm", 50000, "2195 9594 8348 1244");
